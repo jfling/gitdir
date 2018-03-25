@@ -1,0 +1,696 @@
+@charset "utf-8";
+/* 
+	@名称: Base
+	@功能: 重设浏览器默认样式
+	*/
+
+	body, h1, h2, h3, p, dl, dd, ol, ul, th, td, form, fieldset, input, button, textarea {
+		margin: 0;
+		padding: 0;
+	}
+	html {
+		word-wrap: break-word;
+		-webkit-text-size-adjust: none
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 100%;
+		font-weight: normal;
+	}
+	ol, ul {
+		list-style: none
+	}
+	table {
+		border-collapse: collapse;
+		empty-cells: show;
+		font-size: inherit;
+		border-spacing: 0
+	}
+	fieldset, img {
+		border: 0
+	}
+	cite, em, s, i, b {
+		font-style: normal
+	}
+	input, button, textarea, select {
+		font-size: 100%
+	}
+	body, input, button, textarea, select, option {
+		font-size: normal
+	}
+	a, input, textarea {
+		outline: 0;
+		text-decoration: none;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-appearance: none;
+	}
+	li, img, label, input {
+		vertical-align: middle
+	}
+	var {
+		font-style: normal
+	}
+	ins {
+		text-decoration: none
+	}
+	body {
+		font-size: 20px
+	}
+	a {
+		cursor: pointer;
+	}
+	.w640 {
+	/*
+	overflow: hidden;
+	*/
+	margin: auto;
+	max-width: 640px;
+	min-height: 450px;
+}
+@media only screen and (width: 320px){
+	.w640 {
+		min-height: 420px;
+	}
+}
+@media only screen and (min-width: 375px) and (max-width: 414px){
+	.w640 {
+		min-height: 610px;
+	}
+}
+@media only screen and (min-width: 414px) and (max-width: 1000px){
+	.w640 {
+		min-height: 650px;
+	}
+}
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	height: 100%;
+}
+*:focus{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+*:hover{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+*{	
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	font-size: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-overflow-scrolling:touch;  /*让HTML页面内的元素出现滚动条时，滚动会有弹性滚动*/
+}
+a, img {
+	-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+html, body {
+	-webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+	user-select: none;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea {
+	font: 12px/1.5 "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+input,textarea,select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+	outline:none;
+	border-radius: 0;
+}
+textarea {
+	resize: none;
+	outline: none;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 去除默认边框 */
+fieldset, img {
+	border: 0;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul {
+	list-style: none;
+}
+
+q:before, q:after {
+	content: '';
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins, a, a:hover{
+	text-decoration: none;
+}
+/* 清理浮动 */
+.fn-clear:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.fn-clear {
+	zoom: 1; /* for IE6 IE7 */
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+	display: none;
+}
+body .fn-show {
+	display: block;
+}
+
+body .fn-alert{
+	position: fixed;
+	top: 50%;
+	left: 0;
+	margin-top: -20px;
+	width: 100%;
+	z-index: 999;
+	text-align: center;
+}
+body .fn-alert span{
+	box-sizing: border-box;
+	padding: 10px 15px;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	border-radius: 10px;
+}
+/* 设置内联, 减少浮动带来的bug */
+
+.fn-left {
+	float: left;
+}
+.fn-right {
+	float: right;
+}
+.padding-t-10 {
+	padding-top: 10px;
+}
+.padding-t-15 {
+	padding-top: 15px;
+}
+.padding-t-20 {
+	padding-top: 20px;
+}
+.padding-b-10 {
+	padding-bottom: 10px;
+}
+.padding-b-30 {
+	padding-bottom: 30px;
+}
+.padding-10 {
+	padding: 10px;
+}
+.margin-t-5 {
+	margin-top: 5px;
+}
+.margin-t-10 {
+	margin-top: 10px;
+}
+.margin-t-15 {
+	margin-top: 15px;
+}
+.margin-t-20 {
+	margin-top: 20px;
+}
+.margin-t-25 {
+	margin-top: 25px;
+}
+.margin-t-30 {
+	margin-top: 30px;
+}
+.margin-t-35 {
+	margin-top: 35px;
+}
+a.t-blue:hover {
+	text-decoration: underline;
+}
+.underline a:hover {
+	text-decoration: underline;
+}
+
+.text-ellipsis{
+	text-overflow:ellipsis; 
+	overflow:hidden; 
+	white-space:nowrap;
+}
+
+
+/*
+ * 
+ */
+ .b-radius-50{
+ 	-webkit-border-radius: 50%;
+ 	-moz-border-radius: 50%;
+ 	-ms-border-radius: 50%;
+ 	-o-border-radius: 50%;
+ 	border-radius: 50%;
+ }
+ .b-radius-5{
+ 	-webkit-border-radius: 5px;
+ 	-moz-border-radius: 5px;
+ 	-ms-border-radius: 5px;
+ 	-o-border-radius: 5px;
+ 	border-radius: 5px;
+ }
+ .b-radius-3{
+ 	-webkit-border-radius: 3px;
+ 	-moz-border-radius: 3px;
+ 	-ms-border-radius: 3px;
+ 	-o-border-radius: 3px;
+ 	border-radius: 3px;
+ }
+ /*弹性布局*/
+ .box {
+ 	width: 100%;
+ 	display: -webkit-box;
+ 	display: -moz-box;
+ 	display: -ms-flexbox;
+ 	-webkit-box-orient: horizontal;
+ 	-moz-box-orient: horizontal;
+ 	-ms-flex-direction: row;
+ }
+ .box-flex {
+ 	-webkit-box-flex: 1;/* android 2.1-3.0, ios 3.2-4.3 */
+ 	-webkit-flex: 1;/* Chrome 21+ */
+ 	-ms-flex: 1;/* WP IE 10 */
+ 	flex: 1;/* android 4.4 */
+ 	-moz-box-flex: 1;/*Firefox*/
+ 	box-flex: 1;
+ }
+ .box-align {
+ 	display: -webkit-box;
+ 	display: -moz-box;
+ 	display: -ms-flexbox;
+ 	-webkit-box-pack: center;/*垂直-左右居中*/
+ 	-webkit-box-align: center;/*Chrome*/
+ 	-moz-box-pack: center;/*垂直左右居中*/
+ 	-moz-box-align: center;/*Firefox*/
+ 	-ms-flex-pack: center;/*垂直左右居中*/
+ 	-ms-flex-align: center;/*IE*/
+ }
+
+
+ @charset "utf-8";
+/* 
+	@名称: Main
+	@功能: 页面样式
+	*/
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button{
+		-webkit-appearance: none !important;
+		margin: 0; 
+	}
+	input{
+		-webkit-appearance：none;
+	}
+	h3{
+		padding: 15px 0 0;
+	}
+	h6 img{
+		padding-left:5px;
+		width: 30%;
+	}
+	.container {
+		padding-bottom: 30px;
+	}
+	.container .banner img {
+		width: 100%;
+	}
+	.container .select-list {
+		padding: 0 25px;
+		box-sizing: border-box;
+	}
+	.container .select-list .select-part{
+		padding-bottom: 20px;
+	}
+	.container h6 {
+		padding: 15px 0;
+	}
+	.container .select-status{
+		padding-top: 10px;
+	}
+	.container .select-sex,.container .select-age,.select-money,.select-product{
+		padding-top: 40px;
+	}
+
+	.container .select-sex p {
+		height: 60px;
+		padding: 0 20px;
+		padding-top:30px;
+		box-sizing: border-box;
+	}
+	.container .select-sex p a {
+		color: #808080;
+	}
+	.container .select-status p {
+		height: 60px;
+		padding: 0 0px;
+		padding-top:30px;
+		box-sizing: border-box;
+	}
+	.container .select-product p {
+		height: 60px;
+		padding: 0 0px;
+		padding-top:30px;
+		box-sizing: border-box;
+	}
+	.container .select-status p a {
+		color: #808080;
+	}
+	/*身份*/
+	.container .status a span {
+		padding: 35px 35px;
+		background-size: 65px auto;
+
+	}
+	.container .status a:nth-of-type(1) span{
+		background: url(../image/face-1.png) 100% no-repeat;
+		background-size:contain;
+	}
+	.container .status a:nth-of-type(2) span{
+		background: url(../image/face-0-u.png) 100% no-repeat;
+		background-size:contain;
+		opacity: 0.5;
+	}
+	.container .status a:nth-of-type(3) span{
+		background: url(../image/face-2-u.png) 100% no-repeat;
+		background-size:contain;
+		opacity: 0.5;
+	}
+	.container .status a:nth-of-type(4) span{
+		background: url(../image/face-3-u.png) 100% no-repeat;
+		background-size:contain;
+		opacity: 0.5;
+	}
+
+	/*成人*/
+	.container .adult a span {
+		padding: 35px 35px;
+		background-size: 65px auto;
+
+	}
+	.container .adult a:nth-of-type(1) span{
+		background: url(../image/sex_m_u.png) 100% no-repeat;
+		background-size:contain;
+	}
+	.container .adult a:nth-of-type(2) span{
+		background: url(../image/sex_w.png) 100% no-repeat;
+		background-size:contain;
+		/*opacity: 0.5;*/
+	}
+
+	/*身份*/
+	.container .product a span {
+		padding: 30px 35px;
+		background-size: 65px auto;
+
+	}
+	.container .product a:nth-of-type(1) span{
+		background: url(../image/age-60.png) 100% no-repeat;
+		background-size:contain;
+	}
+	.container .product a:nth-of-type(2) span{
+		background: url(../image/age-88-u.png) 100% no-repeat;
+		background-size:contain;
+		/*opacity: 0.5;*/
+	}
+
+	.select-age {
+		padding: 20px 0;
+	}
+	.page-bar{
+		padding-left: 20px;
+		box-sizing: border-box;
+		padding-top: 10px;
+	}
+	.page-bar p {
+		position: relative;
+	}
+	.page-bar p:nth-of-type(2) {
+		width: 50px;
+		color: #ff0000;
+		font-size: 18px;
+		line-height: 10px;
+		text-align: right;
+	}
+	.page-bar p:nth-of-type(1) i {
+		position: absolute;
+		right: -52px;
+		top: -10px;
+		text-align: center;
+		width: 20px;
+		height: 40px;
+		line-height: 40px;
+		color: #ff0000;
+		font-size: 18px;
+	}
+	.page-bar p span {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 15px;
+		padding-right: 30px;
+		box-sizing: border-box;
+		background: #f9cdaf;
+		border-radius: 8px;
+	}
+	.page-bar p span em {
+		background: #ef8337;
+		position: absolute;
+		z-index: 2;
+		width: 0%;
+		height: 10px;
+		border-radius: 5px;
+	}
+	.page-bar p span a {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -15px;
+		width: 30px;
+		height: 30px;
+		background: #c7161e;
+		z-index: 3;
+		cursor: move;
+		/*-webkit-transform: translate3d(100%,0,0);*/
+	}
+	.page-bar p label {
+		position: absolute;
+		top: 35px;
+		color: #808080;
+	}
+	.page-bar p label:nth-of-type(1) {
+		left: 0;
+	}
+	.page-bar p label:nth-of-type(2) {
+		right: 0;
+	}
+/*.box-text{
+position: relative;
+bottom: -42px;
+left: -60px;
+white-space: nowrap;	
+}*/
+.confirm-but{
+	padding-top: 60px;
+}
+.confirm-but a {
+	display: block;
+	/*width: 236px;*/
+	height: 54px;
+	width: 80%;
+	margin: 0 auto;
+	/*padding: 8px 0;
+	background: #c7161e;*/
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 8px;
+	background: url(../image/but_bg_1.png) center center no-repeat;
+	background-size: 100% auto;
+}
+.rangeslider__fill{
+	background：#F07225;
+}
+.rangeslider{
+	background：#E5E5E5;
+}
+/*2.0*/
+.age-limit a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #c7161e;
+	border: #c7161e 1px solid;
+	border-radius: 50%;
+	font-size: 18px;
+}
+.plusBtn{
+	width: 50px;
+	position: absolute;
+	top: -25px;
+	right: -55px;
+}
+
+.plusBtn:active,.minusBtn:active{
+	/*border: #c7161e 1px solid;*/
+	border-style: solid;
+	border-color: #E5E5E5;
+}
+
+.minusBtn{
+	width: 50px;
+	position: absolute;
+	top: 30px;
+	right: -55px;
+}
+
+/**
+*引导页
+*/
+.land{
+	position:fixed;
+	background-color: #Ea5938;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+/*.land_btn img {
+	-webkit-animation: zoomIn 1.5s 1.5s both;
+	}*/
+	.bg_title{
+		position:absolute;
+		width: 40%;
+		left: 5%;
+		margin-top:5%;
+	}
+	.title{
+		position: absolute;
+		width: 80%;
+		top: 23%;
+		left: 10%;
+		z-index: 100
+	}
+	.bg_bottom{
+		position: absolute;
+		width: 100%;
+		height: 25%;
+		bottom: 0;
+		background: url(../image/landpage/bg_bottom.png) repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: center;
+	}
+	.city{
+		position: absolute;
+		width: 100%;
+		height: 10%;
+		bottom: 29%;
+		background: url(../image/landpage/city.png) no-repeat;
+		-webkit-background-size: cover;
+		background-size: contain;
+		background-position: center;
+	}
+	.people{
+		position: absolute;
+		width: 30%;
+		bottom: 20%;
+		left: 8%;
+		z-index: 100;
+	}
+	.title2{
+		position: absolute;
+		width: 45%;
+		bottom: 28%;
+		right: 10%;
+		z-index: 100;
+	}
+	.landpage-btn{
+		position: absolute;
+		width: 70%;
+		bottom: 8%;
+		left: 15%;
+		z-index: 100;
+	}
+
+	.money1{
+		position: absolute;
+		width: 16%;
+		top: 14%;
+		right: 33%;
+		z-index: 100
+	}
+	.money2{
+		position: absolute;
+		width: 8%;
+		top: 45%;
+		left: 18%;
+		z-index: 100;
+	}
+	.cloud1{
+		position: absolute;
+		width: 28%;
+		top: 12%;
+		right: 4%;
+	}
+	.cloud2{
+		position: absolute;
+		width: 25%;
+		bottom: 38%;
+		right: 3%;
+	}
+	.cloud3{
+		position: absolute;
+		width: 30%;
+		top: 12%;
+		left: 7%;
+	}
+
+	.title{
+		-webkit-animation: zoomIn 1.5s 0.5s both;
+	}
+	.money1{
+		-webkit-animation: bounceIn 2s 1s both;
+	}
+	.money2{
+		-webkit-animation: bounceIn 2s 1s both;
+	}
+	.cloud1{
+		-webkit-animation: fadeInRight 1.5s 1.2s both;
+	}
+	.cloud2{
+		-webkit-animation: fadeInRight 1.5s 1.4s both;
+	}
+	.cloud3{
+		-webkit-animation: fadeInLeft 1.5s 1.3s both;
+	}
+	.people{
+		-webkit-animation: zoomInLeft 2s 0s both;
+	}
+	.title2{
+		-webkit-animation: fadeIn 2s 0.5s both;
+	}
+	.landpage-btn{
+		-webkit-animation: fadeInUp 1.5s 1s both,jello 1s 2.5s both;
+	}
+
+	.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
